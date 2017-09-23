@@ -1,8 +1,5 @@
 package com.bujak.model;
 
-/**
- * Created by bujak on 23.09.2017.
- */
 public class Customer {
 
 
