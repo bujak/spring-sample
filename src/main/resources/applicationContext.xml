@@ -9,7 +9,7 @@
     </bean>
     <bean name="customerService"
           class="com.bujak.service.CustomerServiceImpl">
-        <property name="customerRepository" ref="customerRepository" />
+        <constructor-arg index="0" ref="customerRepository" />
     </bean>
 
 </beans>
