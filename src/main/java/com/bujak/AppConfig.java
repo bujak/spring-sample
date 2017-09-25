@@ -1,6 +1,5 @@
 package com.bujak;
 
-import com.bujak.model.Customer;
 import com.bujak.repository.CustomerRepository;
 import com.bujak.repository.CustomerRepositoryImpl;
 import com.bujak.service.CustomerService;
@@ -12,9 +11,8 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     @Bean(name = "customerService")
-    public CustomerService getCustomerServie() {
-        CustomerServiceImpl service = new CustomerServiceImpl();
-        service.setCustomerRepository(getCustomerRepository());
+    public CustomerService getCustomerService() {
+        CustomerServiceImpl service = new CustomerServiceImpl(getCustomerRepository());
         return service;
     }
 
