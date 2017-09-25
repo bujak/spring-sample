@@ -3,6 +3,7 @@ package com.bujak.service;
 import com.bujak.model.Customer;
 import com.bujak.repository.CustomerRepository;
 import com.bujak.repository.CustomerRepositoryImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,7 +11,8 @@ import java.util.List;
 @Service("customerService")
 public class CustomerServiceImpl implements CustomerService {
 
-    private CustomerRepository customerRepository = new CustomerRepositoryImpl();
+    @Autowired
+    private CustomerRepository customerRepository;
 
     @Override
     public List<Customer> findAll() {
