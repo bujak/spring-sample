@@ -1,10 +1,12 @@
 package com.bujak.repository;
 
 import com.bujak.model.Customer;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository("customerRepository")
 public class CustomerRepositoryImpl implements CustomerRepository {
 
     @Override
